@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 namespace Chapter.Singleton
 {
@@ -30,10 +31,18 @@ namespace Chapter.Singleton
 
         private void OnGUI()
         {
+            GUILayout.BeginArea(new Rect(80, 0, 80, 80));
             if (GUILayout.Button("Next Scene"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                int sceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+                if (sceneIndex < 5)
+                    SceneManager.LoadScene(sceneIndex);
+                else
+                    SceneManager.LoadScene(0);
+
             }
+            GUILayout.EndArea();
         }
     }
 }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Innit.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Machine.unity
+    guid: 6fff980d7f1f7ae42a23a624e7af6caf
+  - enabled: 1
     path: Assets/Scenes/1.unity
     guid: e3eab64d03a7f1341ab59a9ab8ceac0d
   - enabled: 1
